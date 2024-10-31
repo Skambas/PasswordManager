@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Логін</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+<div class="container">
+    <div class="form-box">
+        <h2>Login</h2>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="master_password">Master password:</label>
+                <input type="password" id="master_password" name="master_password" required>
+            </div>
+            <button type="submit">login</button>
+        </form>
+        <div class="form-footer">
+            <p>Don't have an account? <a href="../register">Sign up</a> </p>
+        </div>
+        <p id="status"></p>
+    </div>
+</div>
+<script type="module" src="{% static 'js/login.js' %}"></script>
+</body>
+</html>
